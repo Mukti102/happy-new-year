@@ -4,7 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 import Countdown from "react-countdown";
 import { useState } from "react";
 import ParticleBg from "./ParticleBg";
-function App() {
+
+export function App() {
   const [ready, setReady] = useState(false);
   const [textMessage, setTextMessage] = useState(["Selamat Tahun baru 2024"]);
   const particleInitialization = async (engine) => {
@@ -57,12 +58,10 @@ function App() {
         <span className="text-4xl text-white font-bold z-50">
           <Countdown date={Date.now() + timeLine()} onComplete={complete} />
         </span>
-        <p className="text-slate-300 text-[9px] z-50 absolute bottom-5">
-          Create by Mukti 👌
+        <p className="text-slate-300 text-[10px] z-50 absolute bottom-5">
+          Create by Mukti
         </p>
       </div>
     </div>
   );
 }
-
-export default App;
