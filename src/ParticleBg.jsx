@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo } from "react";
 
 function ParticleBg() {
+  const [particlePlay, setParticlePlay] = useState(false);
+  setTimeout(() => {
+    setParticlePlay(!particlePlay);
+  }, 2000);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     });
-  }, []);
+    initParticlesEngine();
+  }, [particlePlay]);
+
   const options = useMemo(
     () => ({
       background: {
@@ -79,16 +85,7 @@ function ParticleBg() {
     }),
     []
   );
-  // const particlesLoaded = (container) => {
-  //   console.log(container);
-  // };
-  return (
-    <Particles
-      id="tsparticles"
-      //   particlesLoaded={particlesLoaded}
-      options={options}
-    />
-  );
+  return <Particles id="tsparticles" options={options} />;
 }
 
 export default ParticleBg;
