@@ -20,9 +20,6 @@ function App() {
     setReady(true);
     setTextMessage(["SELAMAT TAHUN BARU 2024"]);
   };
-  setTimeout(() => {
-    complete();
-  }, 5000);
   return (
     <div className="relative">
       {" "}
