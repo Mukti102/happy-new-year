@@ -21,8 +21,7 @@ function App() {
     setTextMessage(["SELAMAT TAHUN BARU 2024"]);
   };
   return (
-    <div className="relative">
-      {" "}
+    <div className=" relative flex flex-col gap-5 w-full min-h-screen justify-center items-center text-white text-4xl">
       {ready ? (
         <Particles
           init={particleInitialization}
@@ -31,33 +30,31 @@ function App() {
       ) : (
         <ParticleBg />
       )}
-      <div className="flex flex-col gap-5 w-full min-h-screen justify-center items-center text-white text-4xl">
-        <span
-          className={`${
-            ready ? "text-xl" : "text-xl"
-          } w-full h-10 items-center flex justify-center  font-extrabold z-50`}
-        >
-          {ready ? (
-            // <Typewriter words={textMessage} loop={false} />
-            <h1 className="neon text-center mb-5">Selamat Tahun Baru 2024</h1>
-          ) : (
-            <Typewriter
-              words={[
-                "Hitung Mundur",
-                "Menuju Tahun 2024",
-                "Dan Lihat Kembang Apinya",
-              ]}
-              loop={false}
-            />
-          )}
-        </span>
-        <span className="text-4xl text-white font-bold z-50">
-          <Countdown date={Date.now() + timeLine()} onComplete={complete} />
-        </span>
-        <p className="text-slate-300 text-[9px] z-50 absolute bottom-5">
-          Create by Mukti 👌
-        </p>
-      </div>
+      <span
+        className={`${
+          ready ? "text-xl" : "text-xl"
+        } w-full h-10 -translate-y-16 items-center flex justify-center  font-extrabold z-50`}
+      >
+        {ready ? (
+          // <Typewriter words={textMessage} loop={false} />
+          <h1 className="neon text-center mb-5">Selamat Tahun Baru 2024</h1>
+        ) : (
+          <Typewriter
+            words={[
+              "Hitung Mundur",
+              "Menuju Tahun 2024",
+              "Dan Lihat Kembang Apinya",
+            ]}
+            loop={false}
+          />
+        )}
+      </span>
+      <span className="-translate-y-16 text-4xl text-white font-bold z-50">
+        <Countdown date={Date.now() + timeLine()} onComplete={complete} />
+      </span>
+      <p className="text-slate-300 text-[9px] z-50 absolute bottom-5">
+        Create by Mukti 👌
+      </p>
     </div>
   );
 }

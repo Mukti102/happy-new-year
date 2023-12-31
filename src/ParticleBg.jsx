@@ -7,7 +7,7 @@ function ParticleBg() {
   const [particlePlay, setParticlePlay] = useState(false);
   setTimeout(() => {
     setParticlePlay(!particlePlay);
-  }, 2000);
+  }, 1000);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
