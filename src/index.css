@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500;600;700&family=Inter:wght@600;700;800&family=Poppins:ital,wght@0,100;0,200;0,700;0,800;1,200;1,500&family=Quicksand:wght@500;700&display=swap');
+:root {
+  /* font-family: 'Archivo', sans-serif; */
+font-family: 'Inter', sans-serif;
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Quicksand', sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.neon{
+    font-size: 27px;
+    color : #fff;
+    text-shadow: 0 0 10px rgb(20, 201, 180),
+    0 0 20px rgb(20, 201, 180),
+    0 0 30px rgb(20, 201, 180);
+    /* text-shadow: offsetX offsetY blurRadius color */
+}
+.gradient {
+  font-size:1.6rem;
+  width: max-content;
+  height: max-content;
+ background: linear-gradient(144deg, rgba(250,133,36,1) 4%, rgba(233,51,229,1) 43%, rgba(240,238,70,1) 95%);
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
