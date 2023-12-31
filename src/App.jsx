@@ -42,7 +42,7 @@ function App() {
           <Typewriter
             words={[
               "Hitung Mundur",
-              "Menuju Tahun 2024",
+              "Menuju Tahun Baru 2024",
               "Dan Lihat Kembang Apinya",
             ]}
             loop={false}
