@@ -3,6 +3,7 @@ import { loadFireworksPreset } from "tsparticles-preset-fireworks";
 import { Typewriter } from "react-simple-typewriter";
 import Countdown from "react-countdown";
 import { useState } from "react";
+import ParticleBg from "./ParticleBg";
 function App() {
   const [ready, setReady] = useState(false);
   const [textMessage, setTextMessage] = useState(["Selamat Tahun baru 2024"]);
@@ -19,14 +20,19 @@ function App() {
     setReady(true);
     setTextMessage(["SELAMAT TAHUN BARU 2024"]);
   };
+  setTimeout(() => {
+    complete();
+  }, 5000);
   return (
     <>
       {" "}
-      {ready && (
+      {ready ? (
         <Particles
           init={particleInitialization}
           options={{ preset: "fireworks" }}
         />
+      ) : (
+        <ParticleBg />
       )}
       <div className="flex flex-col gap-5 w-full min-h-screen justify-center items-center text-white text-4xl">
         <span
